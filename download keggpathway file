@@ -1,0 +1,1 @@
+wget https://rest.kegg.jp/link/pathway/ko -O ko2pathway.txt
