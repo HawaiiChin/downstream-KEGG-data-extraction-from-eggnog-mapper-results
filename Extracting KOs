@@ -1,0 +1,7 @@
+#find the column number = 12 for KEGG_ko
+head -5 file
+awk 'NR==5' /mnt/d/eggnog-mapper/emap40.emapper.annotations | tr '\t' '\n'|nl|grep KEGG_ko
+
+for f in /mnt/d/eggnog-mapper/eggnog-mapper/*.emapper.annotations; do sample=$(basename "$f" .emapper.annotations); \
+awk -F'\t' -v S="$sample" 'NR>4&&$12 !="-" {split($12, kos, ","); for (i in kos){print S "\t" $1 "\t" kos[i]}}' "$f" \
+> ${sample}.gene2ko.tsv; done
