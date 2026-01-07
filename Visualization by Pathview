@@ -1,0 +1,6 @@
+# when Install-BiocManager as /R/site-library cannot be modified
+
+sudo R
+
+install.package("BiocManager")
+BiocManager::install("pathview")
