@@ -2,5 +2,12 @@
 
 sudo R
 
+sudo apt update
+sudo apt install -y libxml12-dev libcurl4-openssl-dev libssl-dev libcairo2-dev libxt-dev
+sudo apt istall r-base
+
+
+
+
 install.package("BiocManager")
 BiocManager::install("pathview")
