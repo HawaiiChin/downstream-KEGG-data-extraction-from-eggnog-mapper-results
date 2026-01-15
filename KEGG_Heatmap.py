@@ -22,3 +22,5 @@ sns.clustermap(df_z,
 plt.savefig("kegg_clustered_heatmap.png", dpi=300)
 plt.show()
 
+top=df.var(axis=1).sort_values(ascending=False).head(30).index
+df_top=df.loc[top]
